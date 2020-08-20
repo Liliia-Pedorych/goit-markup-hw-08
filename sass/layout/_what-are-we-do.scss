@@ -1,0 +1,35 @@
+/* Чем мы занимаемся */
+
+.services {
+  padding-bottom: 94px;
+
+  .subtitle {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}
+
+.services-list {
+  display: flex;
+}
+
+.services-list-item-img {
+  display: block;
+}
+
+.services-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.services-list-item-wraper {
+  position: relative;
+}

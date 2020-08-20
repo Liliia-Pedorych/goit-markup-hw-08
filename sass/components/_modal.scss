@@ -1,0 +1,240 @@
+/* Модальное окно */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+  transition-property: opacity, transform;
+
+  @extend %animation;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-call {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  margin-bottom: 20px;
+  text-align: center;
+
+  .button {
+    padding-top: 10px;
+    padding-right: 55px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.contact-form-wrapper {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.text-area {
+  margin-bottom: 20px;
+}
+
+.contact-form-item {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border;
+
+  @extend %animation;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border: 1px solid $accent-color;
+  }
+}
+
+.contact-form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $text-color;
+  transition-property: color, transform;
+
+  @extend %animation;
+}
+
+.contact-form-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  display: block;
+  transition-property: fill;
+
+  @extend %animation;
+}
+
+.contact-form-item:not(:placeholder-shown) ~ .contact-form-item-icon,
+.contact-form-item:focus ~ .contact-form-item-icon {
+  fill: $accent-color;
+}
+
+.contact-form-item:not(:placeholder-shown) + .contact-form-label,
+.contact-form-item:focus + .contact-form-label {
+  color: $accent-color;
+  transform: translate(-25px, -42px);
+}
+
+.contact-form-item:not(:placeholder-shown) + .contact-form-label-comment,
+.contact-form-item:focus + .contact-form-label-comment {
+  color: $accent-color;
+  transform: translateY(-35px);
+}
+
+.contact-form-label-comment {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $text-color;
+  transition-property: color, transform;
+
+  @extend %animation;
+}
+
+.comment {
+  height: 120px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  resize: none;
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $title-color;
+}
+
+.checkbox {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+/* .checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-color;
+  border-radius: 2px;
+
+  @extend %animation;
+} */
+
+.checkbox-text {
+  position: relative;
+  font-weight: 400;
+  line-height: 1.71;
+  color: $text-color;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-color;
+    border-radius: 2px;
+
+    @extend %animation;
+  }
+}
+
+.checkbox-item:checked + .checkbox-text::after {
+  background-color: $accent-color;
+  background-origin: border-box;
+  border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.checkbox-link {
+  color: $accent-color;
+}
+
+.contact-form-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.contact-form-close-icon {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+  transition-property: fill;
+
+  @extend %animation;
+
+  .contact-form-close-btn:hover & {
+    fill: $accent-color;
+  }
+}
