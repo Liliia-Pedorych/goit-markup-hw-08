@@ -62,12 +62,19 @@
   width: 100%;
   padding: 60px 136px;
   text-align: center;
-
   background-color: #fff;
-  display: none;
+  transition-property: opacity;
+
+  @extend %animation;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   &.is-open {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 

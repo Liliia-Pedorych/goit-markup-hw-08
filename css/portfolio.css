@@ -367,7 +367,7 @@ html {
   text-decoration: none;
 }
 
-.backdrop, .contact-form-item, .contact-form-label, .contact-form-item-icon, .contact-form-label-comment, .checkbox-text::after, .contact-form-close-icon, .social-links-item-link, .menu-btn, .navigation-list-item-link, .address-list-item-link-icon, .address-list-item-link, .filter-item-btn, .works-list-item-wraper::after, .works-list-item-text {
+.backdrop, .contact-form-item, .contact-form-label, .contact-form-item-icon, .contact-form-label-comment, .checkbox-text::after, .contact-form-close-icon, .social-links-item-link, .menu-btn, .header-menu, .navigation-list-item-link, .address-list-item-link-icon, .address-list-item-link, .filter-item-btn, .works-list-item-wraper::after, .works-list-item-text {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -452,7 +452,6 @@ html {
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
-  opacity: 0;
 }
 
 .modal {
@@ -730,11 +729,17 @@ html {
   padding: 60px 136px;
   text-align: center;
   background-color: #fff;
-  display: none;
+  transition-property: opacity;
+}
+
+.header-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header-menu.is-open {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .navigation-list {
