@@ -671,8 +671,6 @@ html {
 .header {
   position: relative;
   border: 1px solid #ececec;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .header .container {
@@ -734,7 +732,6 @@ html {
 
 .header-menu.is-hidden {
   opacity: 0;
-  pointer-events: none;
 }
 
 .header-menu.is-open {
@@ -813,6 +810,16 @@ html {
 .address-list-item-link:hover,
 .address-list-item-link :focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: orange;
+  }
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 /* Герой */
