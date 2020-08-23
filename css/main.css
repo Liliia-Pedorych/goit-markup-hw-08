@@ -1091,7 +1091,7 @@ html {
   background: #f5f4fa;
 }
 
-.title {
+.team .title {
   margin-bottom: 30px;
   font-size: 28px;
 }
@@ -1165,8 +1165,14 @@ html {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list-item:not(:nth-child(2n + 2)) {
     margin-right: 30px;
+  }
+  .team-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1174,37 +1180,37 @@ html {
   .team {
     padding: 94px 0;
   }
-  .title {
+  .team .title {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.167;
+  }
+  .team-list-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
 /* Постоянные клиенты */
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+
+.clients .title {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
 .clients-list {
   display: flex;
-}
-
-.clients-list-item:not(:last-child) {
-  margin-right: 30px;
+  flex-wrap: wrap;
 }
 
 .clients-list-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 90px;
-  padding-top: 20px;
-  padding-right: 63px;
-  padding-bottom: 20px;
-  padding-left: 63px;
+  padding: 19px 60px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -1216,25 +1222,46 @@ html {
   fill: #2196f3;
 }
 
-.foster {
-  padding-top: 24px;
-  padding-right: 45px;
-  padding-bottom: 24px;
-  padding-left: 45px;
+@media screen and (max-width: 676px) {
+  .clients-list-item-link {
+    width: 210px;
+  }
+  .clients-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .clients-list-item:not(:nth-child(2n + 2)) {
+    margin-right: 30px;
+  }
 }
 
-.brand {
-  padding-top: 22px;
-  padding-right: 55px;
-  padding-bottom: 22px;
-  padding-left: 55px;
+@media screen and (min-width: 768px) and (max-width: 1999px) {
+  .clients-list-item-link {
+    width: 226px;
+  }
+  .clients-list-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+  .clients-list-item:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
 }
 
-.tagline {
-  padding-top: 22px;
-  padding-right: 41px;
-  padding-bottom: 22px;
-  padding-left: 41px;
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0;
+  }
+  .clients .title {
+    font-size: 36px;
+    line-height: 1.167;
+    margin-bottom: 50px;
+  }
+  .clients-list-item-link {
+    width: 170px;
+    padding: 21px 41px;
+  }
+  .clients-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /* Футер */

@@ -3,11 +3,11 @@
 .team {
   padding: 60px 0;
   background: #f5f4fa;
-}
 
-.title {
-  margin-bottom: 30px;
-  font-size: 28px;
+  .title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
 }
 
 .team-list-item {
@@ -82,20 +82,29 @@
     display: flex;
     flex-wrap: wrap;
   }
-
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list-item:not(:nth-child(2n + 2)) {
     margin-right: 30px;
+  }
+
+  .team-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team {
     padding: 94px 0;
+
+    .title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.167;
+    }
   }
 
-  .title {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 1.167;
+  .team-list-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
