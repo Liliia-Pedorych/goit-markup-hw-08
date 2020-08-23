@@ -878,6 +878,9 @@ html {
     justify-content: space-between;
     align-items: baseline;
   }
+  .navigation {
+    margin-right: 305px;
+  }
   .address-list {
     display: flex;
     align-items: center;
