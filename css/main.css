@@ -786,9 +786,9 @@ html {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translateY(101%);
+    transform: translateY(100%);
     width: 100%;
-    padding: 60px 136px;
+    padding: 60px 0;
     text-align: center;
     background-color: #fff;
     transition-property: opacity;
@@ -994,6 +994,7 @@ html {
   margin-bottom: 30px;
   border-radius: 4px;
   background: #f5f4fa;
+  text-align: center;
 }
 
 .description {
@@ -1004,12 +1005,9 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-  .advantages-list-item-icon {
-    display: block;
-    max-width: 100%;
-  }
   .advantages-list-item-icon-wrapper {
-    padding: 25px 190px;
+    padding: 25px 0;
+    width: 100%;
   }
 }
 
@@ -1022,13 +1020,13 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages-list-item {
-    max-width: 354px;
+    width: calc((100% - 30px) / 2);
   }
   .advantages-list-item:not(:nth-child(2n + 2)) {
     margin-right: 30px;
   }
   .advantages-list-item-icon-wrapper {
-    padding: 25px 142px;
+    padding: 25px 0;
   }
 }
 
@@ -1043,7 +1041,7 @@ html {
     margin-right: 30px;
   }
   .advantages-list-item-icon-wrapper {
-    padding: 25px 102px;
+    padding: 25px 0;
   }
 }
 

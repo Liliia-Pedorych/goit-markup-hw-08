@@ -786,9 +786,9 @@ html {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translateY(101%);
+    transform: translateY(100%);
     width: 100%;
-    padding: 60px 136px;
+    padding: 60px 0;
     text-align: center;
     background-color: #fff;
     transition-property: opacity;
