@@ -964,6 +964,7 @@ html {
 
 .works-list-item-img {
   display: block;
+  width: 100%;
 }
 
 .works-list-item-link:hover,
@@ -985,6 +986,9 @@ html {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .works-list-item-type {
@@ -1036,9 +1040,6 @@ html {
   }
   .works-list-item:not(:last-child) {
     margin-bottom: 30px;
-  }
-  .works-list-item-img {
-    width: 100%;
   }
 }
 

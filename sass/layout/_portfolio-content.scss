@@ -46,6 +46,7 @@
 
 .works-list-item-img {
   display: block;
+  width: 100%;
 }
 
 .works-list-item-link:hover,
@@ -68,6 +69,9 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: $title-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .works-list-item-type {
@@ -124,10 +128,6 @@
 
   .works-list-item:not(:last-child) {
     margin-bottom: 30px;
-  }
-
-  .works-list-item-img {
-    width: 100%;
   }
 }
 
