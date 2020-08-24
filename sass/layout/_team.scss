@@ -108,6 +108,10 @@
     }
   }
 
+  .team-list {
+    justify-content: center;
+  }
+
   .team-list-item:not(:last-child) {
     margin-right: 30px;
   }

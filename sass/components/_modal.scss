@@ -22,12 +22,7 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  position: relative;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -45,14 +40,10 @@
 }
 
 .contact-form {
-  margin-bottom: 20px;
   text-align: center;
 
   .button {
-    padding-top: 10px;
-    padding-right: 55px;
-    padding-bottom: 10px;
-    padding-left: 55px;
+    padding: 10px 55px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
@@ -89,7 +80,7 @@
   left: 42px;
   transform: translateY(-50%);
   font-weight: 400;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.01em;
   color: $text-color;
   transition-property: color, transform;
@@ -133,7 +124,7 @@
   top: 12px;
   left: 16px;
   font-weight: 400;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.01em;
   color: $text-color;
   transition-property: color, transform;
@@ -143,13 +134,10 @@
 
 .comment {
   height: 120px;
-  padding-top: 12px;
-  padding-right: 16px;
-  padding-bottom: 12px;
-  padding-left: 16px;
+  padding: 12px 16px;
   resize: none;
   font-weight: 400;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.01em;
   color: $title-color;
 }
@@ -176,14 +164,16 @@
 
 .checkbox-text {
   position: relative;
+  padding-left: 20px;
   font-weight: 400;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.167;
   color: $text-color;
 
   &::after {
     position: absolute;
-    top: 50%;
-    left: -15px;
+    top: 45%;
+    left: 5px;
     transform: translate(-50%, -50%);
     content: '';
     width: 16px;
@@ -235,5 +225,42 @@
 
   .contact-form-close-btn:hover & {
     fill: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 94px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    padding: 94px 0;
+  }
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+
+  .checkbox-text {
+    font-size: 14px;
+    line-height: 1.714;
   }
 }
