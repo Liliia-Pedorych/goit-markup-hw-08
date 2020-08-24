@@ -813,6 +813,7 @@ html {
     left: 0;
     bottom: 0;
     transform: translateY(100%);
+    z-index: 100;
     width: 100%;
     padding: 60px 0;
     text-align: center;
@@ -828,6 +829,7 @@ html {
   .header-menu.is-open {
     visibility: visible;
     opacity: 1;
+    pointer-events: visible;
   }
   .navigation-list {
     margin-bottom: 60px;
