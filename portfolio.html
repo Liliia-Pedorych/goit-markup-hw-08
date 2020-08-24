@@ -20,6 +20,7 @@
           data-menu-button
           type="button"
           class="menu-btn"
+          aria-label="переключатель мобильного меню"
           aria-expanded="false"
           aria-controls="header-menu"
         >
@@ -34,12 +35,12 @@
             ></use>
           </svg>
         </button>
-        <div data-menu class="header-menu is-hidden">
+        <div data-menu id="header-menu" class="header-menu is-hidden">
           <nav class="navigation">
             <ul class="navigation-list list">
               <li class="navigation-list-item">
                 <a
-                  class="navigation-list-item-link link"
+                  class="navigation-list-item-link link current"
                   href="index.html"
                   target="blank"
                   >Студия</a
@@ -47,7 +48,7 @@
               </li>
               <li class="navigation-list-item">
                 <a
-                  class="navigation-list-item-link link current"
+                  class="navigation-list-item-link link"
                   href="portfolio.html"
                   target="blank"
                   >Портфолио</a
