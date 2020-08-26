@@ -346,6 +346,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -380,19 +384,19 @@ html {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -441,6 +445,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   visibility: visible;
   transform: scale(1);
   opacity: 1;
@@ -1251,7 +1256,7 @@ html {
   justify-content: center;
   align-items: center;
   height: 90px;
-  padding: 19px 60px;
+  padding: 10px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
